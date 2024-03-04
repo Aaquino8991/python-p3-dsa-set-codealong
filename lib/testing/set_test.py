@@ -10,6 +10,12 @@ class TestSet:
         for num in set_list:
             assert(num in test_set.dictionary)
 
+    def test_has(self):
+        '''Test has()'''
+        test_set = MySet([1,2,3,4])
+        assert(test_set.has(1) == True)
+        assert(test_set.has(7) == False)
+
     def test_add(self):
         '''Test add() to set'''
         test_set = MySet([1,2,3,4])
@@ -26,12 +32,6 @@ class TestSet:
         for num in set_list:
             assert(num in test_set.dictionary)
 
-    def test_has(self):
-        '''Test has()'''
-        test_set = MySet([1,2,3,4])
-        assert(test_set.has(1) == True)
-        assert(test_set.has(7) == False)
-
     def test_size(self):
         '''Test size()'''
         test_set = MySet([1,2,3,4])
@@ -40,7 +40,7 @@ class TestSet:
 
 
 # Bonus test
-"""
+        
     def test_clear(self):
         '''Test clearing set'''
         test_set = MySet([1,2,3,4])
@@ -51,4 +51,3 @@ class TestSet:
         '''Test __str__()'''
         test_set = MySet([1,2,3,4])
         assert(str(test_set) == 'MySet: {1,2,3,4}')
-"""
